@@ -19,6 +19,7 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.data.redis.connection.RedisPassword;
 
 /**
  * Postgres and Redis access configuration.
@@ -63,6 +64,9 @@ public class PersistenceConfig {
     @Value("${redis.port}")
     private int redisPort;
 
+    @Value("${redis.password}")
+    private String redisPassword;
+
     @Bean
     public DataSource dataSource() {
         BasicDataSource bds = new BasicDataSource();
@@ -105,6 +109,7 @@ public class PersistenceConfig {
     @Bean
     public LettuceConnectionFactory lettuceConnectionFactory() {
         RedisStandaloneConfiguration conf = new RedisStandaloneConfiguration(redisHostname, redisPort);
+        conf.setPassword(RedisPassword.of(redisPassword));
         return new LettuceConnectionFactory(conf);
     }
 
