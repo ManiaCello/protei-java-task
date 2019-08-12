@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "c194947f-cabf-451f-ad76-5e1457543c68",
+		"name": "Protei",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addAccount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Artyom\",\n\t\"email\": \"artmat71@gmail.com\",\n\t\"phoneNumber\": \"79646681016\"\n}"
+				},
+				"url": {
+					"raw": "http://{{hostAddress}}/accountrs/api/v1/accounts",
+					"protocol": "http",
+					"host": [
+						"{{hostAddress}}"
+					],
+					"path": [
+						"accountrs",
+						"api",
+						"v1",
+						"accounts"
+					]
+				},
+				"description": "Добавление нового пользователя. Передаем на сервер данные пользователя (имя пользователя, email, phoneNumber и т.д.). Сохраняем информацию в базе данных. Ответ сервера — уникальный ID нового пользователя"
+			},
+			"response": []
+		},
+		{
+			"name": "getAccount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{hostAddress}}/accountrs/api/v1/accounts/1",
+					"protocol": "http",
+					"host": [
+						"{{hostAddress}}"
+					],
+					"path": [
+						"accountrs",
+						"api",
+						"v1",
+						"accounts",
+						"1"
+					]
+				},
+				"description": "Получение информации о пользователе. Передаем на сервер уникальный ID пользователя. Читаем информацию из базы данных. Ответ сервера — данные пользователя"
+			},
+			"response": []
+		},
+		{
+			"name": "setStatus",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"ONLINE\""
+				},
+				"url": {
+					"raw": "http://{{hostAddress}}/accountrs/api/v1/accounts/1/status",
+					"protocol": "http",
+					"host": [
+						"{{hostAddress}}"
+					],
+					"path": [
+						"accountrs",
+						"api",
+						"v1",
+						"accounts",
+						"1",
+						"status"
+					]
+				},
+				"description": "Изменение статуса пользователя (Online, Away, Offline). Передаем на сервер уникальный ID пользователя и новый статус. Изменяем статус пользователя. Ответ сервера — уникальный ID пользователя, новый и предыдущий статус"
+			},
+			"response": []
+		},
+		{
+			"name": "getStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{hostAddress}}/accountrs/api/v1/accounts/1/status",
+					"protocol": "http",
+					"host": [
+						"{{hostAddress}}"
+					],
+					"path": [
+						"accountrs",
+						"api",
+						"v1",
+						"accounts",
+						"1",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
