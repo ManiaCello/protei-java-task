@@ -25,7 +25,7 @@
         <org.postgresql.version>42.2.6</org.postgresql.version>
         <org.apache.commons.version>2.7.0</org.apache.commons.version>
         <org.hibernate.javax.persistence.version>1.0.2.Final</org.hibernate.javax.persistence.version>
-        <org.hibernate.version>5.4.4.Final</org.hibernate.version>
+        <org.hibernate.version>5.4.24.Final</org.hibernate.version>
         <org.hibernate.hibernate-validator.version>5.4.3.Final</org.hibernate.hibernate-validator.version>
         <com.fasterxml.jackson.core.version>2.9.2</com.fasterxml.jackson.core.version>
         <org.aspectj.version>1.9.4</org.aspectj.version>
