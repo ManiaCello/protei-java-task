@@ -22,7 +22,7 @@
         <tomcat.password>admin</tomcat.password>
         <org.springframework.version>5.1.9.RELEASE</org.springframework.version>
         <org.springframework.data.version>2.1.10.RELEASE</org.springframework.data.version>
-        <org.postgresql.version>42.2.6</org.postgresql.version>
+        <org.postgresql.version>42.3.3</org.postgresql.version>
         <org.apache.commons.version>2.7.0</org.apache.commons.version>
         <org.hibernate.javax.persistence.version>1.0.2.Final</org.hibernate.javax.persistence.version>
         <org.hibernate.version>5.4.4.Final</org.hibernate.version>
