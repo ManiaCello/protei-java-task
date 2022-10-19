@@ -27,7 +27,7 @@
         <org.hibernate.javax.persistence.version>1.0.2.Final</org.hibernate.javax.persistence.version>
         <org.hibernate.version>5.4.4.Final</org.hibernate.version>
         <org.hibernate.hibernate-validator.version>5.4.3.Final</org.hibernate.hibernate-validator.version>
-        <com.fasterxml.jackson.core.version>2.9.2</com.fasterxml.jackson.core.version>
+        <com.fasterxml.jackson.core.version>2.13.4.1</com.fasterxml.jackson.core.version>
         <org.aspectj.version>1.9.4</org.aspectj.version>
         <com.querydsl.version>4.2.1</com.querydsl.version>
         <io.lettuce.version>5.1.8.RELEASE</io.lettuce.version>
